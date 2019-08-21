@@ -11,3 +11,8 @@ The application is using Room, a persistent library design to implement an abstr
 
 
 Using this architecture, when a user enters a word in the second activity, the word enters the database using the Room library. In turn, the LiveData object is observing the repository. Once the repository has new information, the ViewModel notifies the RecyclerView's adatpter, and a new View is added onto the screen in the first Activity.
+
+
+![](https://github.com/ssmobile/room-word-sample/blob/master/screenshots/before.png?raw=true)
+
+![](https://github.com/ssmobile/room-word-sample/blob/master/screenshots/after.png?raw=true)
