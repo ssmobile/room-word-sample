@@ -8,3 +8,6 @@ The application is using Room, a persistent library design to implement an abstr
 - The Objects are then moved to a Repository, where all application data is sourced.
 - From the repository, the UI accesses the repository using a ViewModel seamlessly, while LiveData (A lifecycle-aware holder class) is holding the data ensuring that any changes to the databases is properly reflected in the Views.
 - There is a RecyclerView using an adapter to inflate the information onto the UI. The Recyclerview's Adapter is controlled by the ViewModel, such that whenever the data changes, the ViewModel can set the new information into the Adapter, which in turn updates the UI.`
+
+
+Using this architecture, when a user enters a word in the second activity, the word enters the database using the Room library. In turn, the LiveData object is observing the repository. Once the repository has new information, the ViewModel notifies the RecyclerView's adatpter, and a new View is added onto the screen in the first Activity.
